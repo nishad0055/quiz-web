@@ -6,8 +6,8 @@ import bg from '../../assets/background.png'
 
 const Hero = () => {
     return (
-        <div className="relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0 bg-[{}]">
-        <div className="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-8 lg:max-w-screen-xl">
+        <div className="relative flex flex-col py-16 lg:pt-0 lg:flex-col lg:pb-0 bg-gradient-to-r from-purple-500 to-pink-500">
+        <div className="flex flex-col items-start w-full max-w-xl px-4 mx-auto lg:px-12 lg:max-w-screen-xl">
           <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
             <div className="max-w-xl mb-6">
               <div>
@@ -15,7 +15,7 @@ const Hero = () => {
                   New Colaboration
                 </p>
               </div>
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+              <h2 className="max-w-lg mb-6 font-sans text-6xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
                 The quick, brown fox
                 <br className="hidden md:block" />
                 jumps over{' '}
@@ -23,7 +23,7 @@ const Hero = () => {
                   a lazy dog
                 </span>
               </h2>
-              <p className="text-base text-gray-700 md:text-lg">
+              <p className="text-base text-white md:text-lg">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae. explicabo.
