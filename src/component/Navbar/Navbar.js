@@ -8,11 +8,10 @@ const Navbar = () => {
    
     
     return (
-        <div class="bg-gray-900">
-        <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="bg-slate-900 ">
+        <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 shadow-lg">
           <div class="relative flex items-center justify-between">
-            <a
-              href="/"
+            <Link to ='/'
               aria-label="Company"
               title="Company"
               class="inline-flex items-center"
@@ -35,11 +34,11 @@ const Navbar = () => {
               <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                 Company
               </span>
-            </a>
+            </Link>
             <ul class="flex items-center hidden space-x-8 lg:flex">
               <li>
                 <Link
-                  href="/home"
+                  to="/home"
                   class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   Home
@@ -47,7 +46,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="/statistic"
+                  to="/statistic"
                   class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   Statistic
@@ -55,7 +54,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="/blog"
+                  to="/blog"
                   class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   Blog
