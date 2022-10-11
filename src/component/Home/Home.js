@@ -2,11 +2,12 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Courses from '../Courses/Courses';
 import Hero from '../Hero/Hero';
+import Statistics from '../Statistics/Statistics';
 
 
 const Home = () => {
     const courses = useLoaderData();
-    console.log(courses)
+
     
     return (
         <div>
@@ -16,7 +17,10 @@ const Home = () => {
                     courses.data.map(course => <Courses
                     key ={course.id}
                     course ={course}
-                    ></Courses>)
+                    
+                    ></Courses>
+                    )
+                   
                 }
             </div>
               
