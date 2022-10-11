@@ -3,6 +3,7 @@ import './App.css';
 import Blog from './component/Blog/Blog';
 import Errorpage from './component/Errorpage/Errorpage';
 import Home from './component/Home/Home';
+import QuizDetails from './component/QuizDetails/QuizDetails';
 import Statistics from './component/Statistics/Statistics';
 import Root from './Root/Root';
 
@@ -30,6 +31,15 @@ function App() {
           path: 'blog',
          element: <Blog></Blog>
         },
+        {
+          path:'/course/:courseId',
+          
+          loader: async({params}) =>{
+             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.courseId}`)
+           },
+           
+          element: <QuizDetails></QuizDetails>
+        }
         
       ]
     }

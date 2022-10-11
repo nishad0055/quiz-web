@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Courses.css'
+import {AiOutlineArrowRight} from 'react-icons/ai'
 
 const Courses = ({course}) => {
     const {name, logo, total,id} = course;
@@ -16,7 +17,7 @@ const Courses = ({course}) => {
              <p className='badge badge-outlin'>Total Time: 10<small> min</small> </p>
              <p className='badge badge-outlin'>Total Quiz: {total}</p>
              </div>
-             <button className="btn btn-secondary"> <Link to={`quiz/${id}`} >Start Quiz</Link> </button>
+              <Link className='btn' to={`course/${id}`} >Start Quiz <AiOutlineArrowRight/> </Link>
             </div>
             </div>
         </div>

@@ -52,13 +52,12 @@ const Hero = () => {
                       height="24"
                     />
                   </svg>
-                  <span className="relative">The</span>
+                  <span className="relative"></span>
                 </span>{' '}
-                quick, brown fox jumps over a lazy dog
+               Welcome to Boombox World of Tech Quiz
               </h2>
               <p className="text-base text-white md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque rem aperiam, eaque ipsa quae.
+              Play hundreed of free online  quizzes. There is a fun quiz about virtually every topic React, Java, Python, Git, CSS and more!
               </p>
             </div>
           </div>
