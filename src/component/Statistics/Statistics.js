@@ -4,10 +4,9 @@ import { useLoaderData } from 'react-router-dom';
 
 const Statistics = () => {
     const data = useLoaderData();
-    console.log(data.data);
     return (
         <div className='w-[90%] mx-auto justify-center items-center my-10' >
-          <ResponsiveContainer width= '100%'  aspect={3}>
+          <ResponsiveContainer width= '100%' height={400} aspect={3}>
              <BarChart data ={data.data} width={600} height ={400} >
                 <XAxis dataKey= 'name' ></XAxis>
                 <YAxis></YAxis>

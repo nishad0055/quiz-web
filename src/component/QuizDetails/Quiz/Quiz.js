@@ -5,23 +5,22 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({qu}) => {
-    const {question, options, correctAnswer,} = qu;
+    const {question, options, correctAnswer} = qu;
     
-    const [eye , setEye] = useState(false);
+      
 
-    function handleClick (correctAnswer) {
-        setEye(correctAnswer);
-    }
-    
-
-  
+   
+       
+       
         const selectOption = (option) =>{
-            if(correctAnswer ===option){
-                toast("Wow Your Answer is Correct!");
+            
+            if(option === correctAnswer){
+                toast("correct Answer")
             }
             else{
-                toast("Ops Your Answer is inCorrect!");
+                toast("incorrect Answer")
             }
+           
            
         }
 
@@ -30,22 +29,22 @@ const Quiz = ({qu}) => {
     
     return (
         <div className ='all-qu'>
-            
+
+        
             <h5 className='w-[60%] mx-auto text-center pt-5 text-2xl' >Question: {question.replace(/<[^>]+>/g, '')} </h5>
             
-            <div className='flex justify-center items-center'>
-            <button> <AiFillEye  onClick={handleClick} ></AiFillEye></button>
+            <div  className='flex justify-center items-center'>
+            <button > <AiFillEye ></AiFillEye></button>
+
             </div>
-          
-          
 
             <div className="qu-container">
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-[60%] mx-auto gap-5 my-10">
                  
                     {
-                        options.map( (option) =>{
-                            return  <li className='bg-purple-500 text-white p-3 cursor-pointer rounded transition duration-200 ease-out hover:ease-in shadow-lg
-                            ' onClick={()=> selectOption(option)} > {option} </li> 
+                        options.map( (option,i) =>{
+                            return  <li  className='bg-purple-500 text-white p-3 cursor-pointer rounded transition duration-200 hover:bg-slate-700 ease-in shadow-lg 
+                            '  onClick={()=> selectOption(option)} > {option}  </li> 
                         })
                     }
                  
