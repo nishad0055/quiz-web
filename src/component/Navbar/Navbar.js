@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+import  './Navbar.css'
 
 
 
@@ -36,30 +37,28 @@ const Navbar = () => {
           </Link>
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
-              <Link
+              <NavLink
                 to="/home"
-                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                className=" {({isActive}) => isActive? 'active': undefined'} font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/statistic"
-                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 {({isActive}) => isActive? 'active': undefined'}"
               >
                 Statistic
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/blog"
-                aria-label="Product pricing"
-                title="Product pricing"
-                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 {({isActive}) => isActive? 'active': undefined'}"
               >
                 Blog
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <div className="lg:hidden">
@@ -132,30 +131,30 @@ const Navbar = () => {
                   <nav>
                     <ul className="space-y-4">
                       <li>
-                        <Link
+                        <NavLink
                           href="/home"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 {({isActive}) => isActive? 'active': undefined'}"
                         >
                           Home
-                        </Link>
+                        </NavLink>
                       </li>
                       <li>
-                        <Link
+                        <NavLink
                           to="/statistic"
                           
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 {({isActive}) => isActive? 'active': undefined'}"
                         >
                           Statistic
-                        </Link>
+                        </NavLink>
                       </li>
                       <li>
-                        <Link
+                        <NavLink
                           to="/blog"
                          
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 {({isActive}) => isActive? 'active': undefined'}"
                         >
-                          Pricing
-                        </Link>
+                          Blog
+                        </NavLink>
                       </li>
                     </ul>
                   </nav>

@@ -8,9 +8,8 @@ const Quiz = ({qu}) => {
     const {question, options, correctAnswer} = qu;
     
       
-
+     
    
-       
        
         const selectOption = (option) =>{
             
@@ -23,7 +22,8 @@ const Quiz = ({qu}) => {
            
            
         }
-
+    
+        const notify = () => toast('CorrectAns: ' + correctAnswer)
 
     
     
@@ -34,7 +34,7 @@ const Quiz = ({qu}) => {
             <h5 className='w-[60%] mx-auto text-center pt-5 text-2xl' >Question: {question.replace(/<[^>]+>/g, '')} </h5>
             
             <div  className='flex justify-center items-center'>
-            <button > <AiFillEye ></AiFillEye></button>
+            <button onClick={notify} > <AiFillEye ></AiFillEye></button>
 
             </div>
 
